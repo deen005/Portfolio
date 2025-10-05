@@ -7,9 +7,76 @@
 body {
   font-family: Arial, sans-serif;
   background: #0d1b2a;
-  color:gold;
-  font-size: 20px;
+  color: gold;
+  font-size: 18px;
   line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #0d1b2a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: gold;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  font-size: 16px;
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: chartreuse;
+}
+
+.hero-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 10%;
+  background: #162447;
+  text-align: left;
+}
+
+.hero-right {
+  flex: 1;
+  padding-left: 50px;
+}
+
+.role {
+  color: #f9a826;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.name span {
+  color: #f9a826;
+}
+
+.intro {
+  font-size: 18px;
+  color: #ccc;
+  margin: 20px 0;
+  max-width: 450px;
 }
 
 .resume-btn {
@@ -21,122 +88,35 @@ body {
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .resume-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(11, 11, 11, 0.4);
-  background: linear-gradient(45deg,lightblue, lightblue);
-  color:blue;
+  background: linear-gradient(45deg, lightblue, lightblue);
+  color: blue;
 }
-
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  background: #0d1b2a;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.navbar nav a {
-  margin: 0 15px;
-  font-size: 16px;
-  color: #ddd;
-}
-
-.navbar nav a:hover {
-  color:chartreuse;
-}
-
-.hero-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 10%;
-}
-
-.hero-left {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-img {
-  width: 280px;
-  height: auto;
-  border-radius: 12px;
-  border: 6px solid #fff;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-}
-
-.hero-right {
-  flex: 1;
-  padding-left: 50px;
-}
-
-.role {
-  color: #f9a826;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.name {
-  font-size: 42px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.name span {
-  color: #f9a826;
-}
-
-.intro {
-  font-size: 16px;
-  color: #ccc;
-  margin: 20px 0;
-  max-width: 450px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #f9a826;
-  border-radius: 6px;
-  color: #f9a826;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #f9a826;
-  color: #0d1b2a;
-}
-
 
 .about {
   padding: 60px 10%;
-  background: #162447;
+  background: #1b263b;
   text-align: center;
 }
 
 .about h2 {
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 20px;
   color: #f9a826;
+}
+
+.about p {
+  color: #ccc;
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
 }
 
 .skills {
@@ -146,7 +126,7 @@ a {
 }
 
 .skills h2 {
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 30px;
   color: #f9a826;
 }
@@ -162,7 +142,8 @@ a {
   padding: 15px;
   border-radius: 8px;
   font-weight: bold;
-  transition: transform 0.3s;
+  color: gold;
+  transition: transform 0.3s, background 0.3s;
 }
 
 .skill:hover {
@@ -171,7 +152,6 @@ a {
   color: #0d1b2a;
 }
 
-
 .projects {
   padding: 60px 10%;
   background: #162447;
@@ -179,76 +159,103 @@ a {
 }
 
 .projects h2 {
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 30px;
-  color:yellowgreen;
+  color: yellowgreen;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  
 }
 
 .project-card {
   background: #1b263b;
   padding: 20px;
   border-radius: 10px;
-  transition: transform 0.3s;
   border: 2px solid bisque;
+  transition: transform 0.3s, background 0.3s;
+  color: gold;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  background:purple;
-  color:white;
+  background: purple;
+  color: white;
 }
 
-
 .contact {
-  padding: 60px 10%;
+  padding: 80px 10%;
   background: #0d1b2a;
   text-align: center;
+  color: white;
 }
 
 .contact h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #f9a826;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #00bcd4;
+  font-weight: 700;
 }
 
-.contact form {
-  max-width: 500px;
-  margin: 0 auto;
+.contact h2 i {
+  margin-right: 10px;
+  color: #00bcd4;
+}
+
+.contact p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.contact-info {
+  margin-bottom: 15px;
+}
+
+.contact-info a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  color: #00ffff;
+}
+
+.contact-buttons {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
 }
 
-.contact input,
-.contact textarea {
-  padding: 12px;
-  margin: 10px 0;
+.contact-buttons button {
+  background: #00bcd4;
+  color: white;
   border: none;
-  border-radius: 6px;
-  outline: none;
-}
-
-.contact button {
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  background: #f9a826;
-  color: #0d1b2a;
-  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.contact button:hover {
-  background: #ffbe4d;
+.contact-buttons button i {
+  font-size: 18px;
 }
 
+.contact-buttons button:hover {
+  background: #7163cf;
+  transform: translateY(-3px);
+}
 
 footer {
   text-align: center;
@@ -256,4 +263,5 @@ footer {
   background: #162447;
   font-size: 14px;
   color: #ccc;
+  border-top: 1px solid #333;
 }
