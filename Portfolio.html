@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deena J - Portfolio</title>
   <link rel="stylesheet" href="style.css">
+
+ 
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   
-
   <header class="navbar">
     <h1 class="logo">Deena J</h1>
     <nav>
@@ -20,9 +22,8 @@
     </nav>
   </header>
 
-  
+  <!-- Hero Section -->
   <section id="home" class="hero-box">
-           
     <div class="hero-right">
       <p class="role">— Full Stack Developer</p>
       <h1 class="name">Deena <span>J.</span></h1>
@@ -31,12 +32,11 @@
         strategy and technology. I love building user-friendly websites 
         and solving problems with code.
       </p>
-      <a class="resume-btn" href="Deena PFS Resume.pdf" download="Deena_Resume">Download Resume </a>
-
+      <a class="resume-btn" href="./Deena PFS Resume.pdf" download="Deena_Resume">Download Resume</a>
     </div>
   </section>
 
-  
+  <!-- About Section -->
   <section id="about" class="about">
     <h2>About Me</h2>
     <p>
@@ -46,7 +46,7 @@
     </p>
   </section>
 
-  
+  <!-- Skills Section -->
   <section id="skills" class="skills">
     <h2>Skills</h2>
     <div class="skill-grid">
@@ -60,44 +60,64 @@
     </div>
   </section>
 
-  
+  <!-- Projects Section -->
   <section id="projects" class="projects">
     <h2>Projects</h2>
     <div class="project-grid">
       <div class="project-card">
         <h3>Library Management System</h3>
-        <p>I have made this project by using Python and MySQL</p>
+        <p>Developed using Python and MySQL for efficient book and user management.</p>
       </div>
       <div class="project-card">
-        <h3>Front end </h3>
-        <p> None</p>
+        <h3>Frontend Design</h3>
+        <p>Created multiple responsive layouts using HTML, CSS, and JavaScript.</p>
       </div>
       <div class="project-card">
-        <h3> Website</h3>
-        <p>Created a responsive portfolio using Html, css and Javascript.</p>
+        <h3>Portfolio Website</h3>
+        <p>Built a personal portfolio using HTML, CSS, and JavaScript showcasing projects and skills.</p>
       </div>
     </div>
   </section>
 
-  
+  <!-- Contact Section -->
   <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <h2><i class="fas fa-address-card"></i> Contact Me</h2>
+    <p>Looking forward to connecting and exploring professional opportunities!</p>
+
+    <div class="contact-info">
+      <p>
+        <i class="fas fa-envelope"></i> 
+        <a href="mailto:deena005j@gmail.com">deena005j@gmail.com</a> |
+        <i class="fas fa-phone-alt"></i> 
+        <a href="tel:+919884712005">+91 9884712005</a>
+      </p>
+    </div>
+
+    <div class="contact-buttons">
+      <button id="emailBtn"><i class="fas fa-paper-plane"></i> Send Email</button>
+      <button id="linkedinBtn"><i class="fab fa-linkedin"></i> LinkedIn</button>
+      <button id="githubBtn"><i class="fab fa-github"></i> GitHub</button>
+    </div>
   </section>
 
-  
+  <!-- Footer -->
   <footer>
     <p>© 2025 Deena J | All Rights Reserved</p>
   </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("emailBtn").addEventListener("click", () => {
+      window.location.href = "mailto:deena005j@gmail.com";
+    });
+
+    document.getElementById("linkedinBtn").addEventListener("click", () => {
+      window.open("http://www.linkedin.com/in/deena-005j", "_blank");
+    });
+
+    document.getElementById("githubBtn").addEventListener("click", () => {
+      window.open("https://github.com/deen005", "_blank");
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
